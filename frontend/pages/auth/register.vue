@@ -106,9 +106,9 @@ export default {
                     data: this.form,
                 })
             } catch (err) {
-                this.$toast(err, {
-                type: TYPE.ERROR,
-            })
+                this.$toast(err.response.data.message, {
+                    type: TYPE.ERROR,
+                })
             }
         },
     },
